@@ -14,7 +14,7 @@
                         <p class="text-right">15 Products</p>
                         <a href="{{ route('frontend.products.index', $categorys->id) }}" class="cat-img position-relative overflow-hidden mb-3">
                             @foreach( $categorys->images as $image)
-                            <img class="img-fluid" src="{{ asset('storage/categories/' . $image->image	) }}g" alt="">
+                            <img class="img-fluid" src="{{ asset('storage/categories/'. $image->image) }}" alt="">
                             @endforeach
                         </a>
                         <a href="{{ route('frontend.products.index', $categorys->id) }}">
