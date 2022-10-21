@@ -49,7 +49,7 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }}</a>
                         <div class="dropdown-menu rounded-0 m-0">
-                            <a href="#" class="dropdown-item">Wiew Profile</a>
+                            <a href="{{route('admin.home')}}" class="dropdown-item"> Dashboard</a>
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
                                 <button onclick="event.preventDefault();this.closest('form').submit();" class="dropdown-item btn">Logout</button>

@@ -56,7 +56,12 @@
                                                 {{-- <x-admin.forms.select name="color_id" label="Select Color"
                                                     :values="$colors" :selectedval="old('color')" /> --}}
                                                 <x-admin.forms.checkbox name="colors[]" :checkList="$colors" label="Colors" />
+                                                @php
+                                                                $checklist = ['Is Active'];
+                                                                @endphp
 
+
+                                                           
                                                 <div class="mb-3">
                                                 <label class="input-lable" for="">
                                                         Image Upload</label>

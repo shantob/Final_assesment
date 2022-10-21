@@ -9,6 +9,7 @@ use App\Http\Controllers\backend\ProductController as Product;
 use App\Http\Controllers\backend\CategoryController as Category;
 use App\Http\Controllers\backend\ColorController as Color;
 use App\Http\Controllers\backend\BrandController as Brand;
+use App\Http\Controllers\backend\SizeController as Size;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\backend\UserController as User;
 /*
@@ -101,7 +102,14 @@ Route::middleware('auth')->group(function () {
         Route::resource('color', Color::class);
 
         Route::resource('brand', Brand::class);
+        Route::get('/sizes-trash', [Size::class, 'trash'])->name('sizes.trash');
+        Route::patch('/sizes-trash/{id}/restore', [Size::class, 'restore'])->name('sizes.restore');
+        Route::delete('/sizes-trash/{id}/delete', [Size::class, 'delete'])->name('sizes.delete');
 
+        Route::get('/pdf', [Size::class, 'downloadPdf'])->name('sizes.pdf');
+        Route::get('/export', [Size::class, 'exportXl'])->name('sizes.export');
+   
+    Route::resource('sizes', Size::class);
 
         Route::prefix('users')->name('users.')->group(function () {
             Route::get('/', [User::class, 'index'])->name('index');

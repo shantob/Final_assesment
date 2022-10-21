@@ -75,7 +75,8 @@ class ProductController extends Controller
         $categories = Category::pluck('name', 'id')->toArray();
         $brands = Brand::pluck('name', 'id')->toArray();
         $colors = Color::pluck('name', 'id')->toArray();
-        $sizes = Size::pluck('name', 'id')->toArray();
+        $sizes = Size::pluck('title', 'id')->toArray();
+       // dd($sizes);
         return view("backend.product.create", compact('categories', 'brands', 'colors', 'sizes'));
     }
 

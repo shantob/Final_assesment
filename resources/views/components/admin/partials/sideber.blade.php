@@ -80,6 +80,13 @@
                 </a>
             </li>
 
+            <li class="nav-item {{ Route::is('sizes.index') ? 'active' : '' }}">
+                <a href="{{ route('sizes.index') }}">
+                    <i class="la la-table"></i>
+                    <p class=" text-dark">Sizes</p>
+                </a>
+            </li>
+
             <li class="nav-item {{ Route::is('admin.commentlist') ? 'active' : '' }}">
                 <a href="{{ route('admin.commentlist') }}">
                     <i class="la la-table"></i>

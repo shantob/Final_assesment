@@ -36,14 +36,14 @@ class HomeController extends Controller
       } else {
          $category = Category::paginate(5);
       }
-      if ($key = request('product_name')) {
-         $blogs = Blog::latest()
-            ->where('title', 'LIKE', "%{$key}%")
-            ->paginate(1);
-      } else {
-         $blogs = Blog::paginate(3)->fragment('blogs');
-      }
-      return view("forntend/index", compact('category', 'productall', 'blogs'));
+      // if ($key = request('product_name')) {
+      //    $blogs = Blog::latest()
+      //       ->where('title', 'LIKE', "%{$key}%")
+      //       ->paginate(1);
+      // } else {
+      //    $blogs = Blog::paginate(3)->fragment('blogs');
+      // }
+      return view("forntend/index", compact('category', 'productall'));
    }
 
    public function productDetails(Product $product)
