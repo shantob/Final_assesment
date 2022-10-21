@@ -30,6 +30,7 @@ class BrandController extends Controller
             'color_id' => $request->color_id,
             // 'image' =>  $this->uploadImage($request->file('image')),
             'is_active' => $request->is_active ? true : false,
+            'image' => $this->uploadImage($request->file('image')),
         ] ;
         $brand = Brand::create($data);
         $brand->images()->create([

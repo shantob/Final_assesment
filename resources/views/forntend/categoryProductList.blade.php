@@ -3,11 +3,12 @@
         HOME
         </x-slot>
 
-
+        <x-forntend.partials.header/>
         <!-- Categories Section End -->
 
         <!-- Featured Section Begin -->
         <section class="featured spad">
+        <div class="container-fluid pt-5">
             <div class="row featured__filter " data-masonry='{"percentPosition": true }'>
                 @forelse($category->products as $product)
                 <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
@@ -29,6 +30,7 @@
                 <h1 class="text-center text-danger">No data found</h1>
                 @endforelse
             </div>
+</div>
         </section>
         <!-- Featured Section End -->
 
@@ -37,5 +39,5 @@
 
         <!-- ................................ -->
         <!-- fooder//////////////////////////////// -->
-        <x-forntend.partials.card />
+       {{-- <x-forntend.partials.card />--}}
 </x-forntend.master>
