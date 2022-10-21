@@ -1,4 +1,4 @@
-<div class="sidebar bg-dark">
+<div class="sidebar bg-light">
     <div class="scrollbar-inner sidebar-wrapper">
         <div class="user">
             <div class="photo">
@@ -6,9 +6,9 @@
             </div>
             <div class="info">
                 <a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="true">
-                    <span class=" text-light">
+                    <span class=" text-dark">
                         {{Auth::user()->name}}
-                        <span class="user-level  text-light">{{Auth::user()->role_id == 1? 'Admin' : 'Manager'}}</span>
+                        <span class="user-level  text-dark">{{Auth::user()->role_id == 1? 'Admin' : 'Manager'}}</span>
                         <span class="caret"></span>
                     </span>
                 </a>
@@ -18,17 +18,17 @@
                     <ul class="nav">
                         <li>
                             <a href="#profile">
-                                <span class="link-collapse  text-light">My Profile</span>
+                                <span class="link-collapse  text-dark">My Profile</span>
                             </a>
                         </li>
                         <li>
                             <a href="#edit">
-                                <span class="link-collapse text-light">Edit Profile</span>
+                                <span class="link-collapse text-dark">Edit Profile</span>
                             </a>
                         </li>
                         <li>
                             <a href="#settings">
-                                <span class="link-collapse text-light">Settings</span>
+                                <span class="link-collapse text-dark">Settings</span>
                             </a>
                         </li>
                     </ul>
@@ -39,65 +39,65 @@
             <li class="nav-item {{ Route::is('admin.home') ? 'active' : '' }}">
                 <a href="{{ route('admin.home') }}">
                     <i class="la la-dashboard"></i>
-                    <p class=" text-warning">Dashboard</p>
+                    <p class=" text-dark">Dashboard</p>
                 </a>
             </li>
 
             <li class="nav-item {{ Route::is('product.index') ? 'active' : '' }}">
                 <a href="{{ route('product.index') }}">
                     <i class="la la-table"></i>
-                    <p class=" text-warning">All Product</p>
+                    <p class=" text-dark">All Product</p>
                 </a>
             </li>
             <li class="nav-item {{ Route::is('product.create') ? 'active' : '' }}">
                 <a href="{{ route('product.create') }}">
                     <i class="la la-table"></i>
-                    <p class=" text-warning">Add Product</p>
+                    <p class=" text-dark">Add Product</p>
                 </a>
             </li>
             <li class="nav-item {{ Route::is('category.index') ? 'active' : '' }}">
                 <a href="{{ route('category.index') }}">
                     <i class="la la-table"></i>
-                    <p class=" text-warning">Category</p>
+                    <p class=" text-dark">Category</p>
                 </a>
             </li>
             <li class="nav-item {{ Route::is('category.create') ? 'active' : '' }}">
                 <a href="{{ route('category.create') }}">
                     <i class="la la-table"></i>
-                    <p class=" text-warning">Category Add</p>
+                    <p class=" text-dark">Category Add</p>
                 </a>
             </li>
             <li class="nav-item {{ Route::is('color.index') ? 'active' : '' }}">
                 <a href="{{ route('color.index') }}">
                     <i class="la la-table"></i>
-                    <p class=" text-warning">Color</p>
+                    <p class=" text-dark">Color</p>
                 </a>
             </li>
             <li class="nav-item {{ Route::is('brand.index') ? 'active' : '' }}">
                 <a href="{{ route('brand.index') }}">
                     <i class="la la-table"></i>
-                    <p class=" text-warning">Brand</p>
+                    <p class=" text-dark">Brand</p>
                 </a>
             </li>
 
             <li class="nav-item {{ Route::is('admin.commentlist') ? 'active' : '' }}">
                 <a href="{{ route('admin.commentlist') }}">
                     <i class="la la-table"></i>
-                    <p class=" text-warning">Comment</p>
+                    <p class=" text-dark">Comment</p>
                     <span class="badge badge-success">#</span>
                 </a>
             </li>
             <li class="nav-item {{ Route::is('admin.bloglist') ? 'active' : '' }}">
                 <a href="{{ route('admin.bloglist') }}">
                     <i class="la la-table"></i>
-                    <p class=" text-warning">Blog List</p>
+                    <p class=" text-dark">Blog List</p>
                     <span class="badge badge-warning"></span>
                 </a>
             </li>
             <li class="nav-item ">
                 <a href="#">
                     <i class="la la-table"></i>
-                    <p class=" text-warning">Notification</p>
+                    <p class=" text-dark">Notification</p>
                     @php
                     $notifications = Auth::user()->unreadNotifications;
                     @endphp
@@ -107,7 +107,7 @@
             <li class="nav-item {{ Route::is('users.index') ? 'active' : '' }}">
                 <a href="{{ route('users.index') }}">
                     <i class="la la-table"></i>
-                    <p class=" text-warning">User List</p>
+                    <p class=" text-dark">User List</p>
                     <span class="badge badge-warning"></span>
                 </a>
             </li>

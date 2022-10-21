@@ -1,5 +1,5 @@
-<div class="main-header bg-dark">
-    <div class="logo-header text-light">
+<div class="main-header bg-light">
+    <div class="logo-header text-dark">
 
         Dashboard
 
@@ -64,7 +64,7 @@
                 </li>
                 <li class="nav-item dropdown ">
                     <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
-                        <img src="{{ asset('assets/admin/img/profile.jpg') }}" alt="user-img" width="36" class="img-circle"><span class=" text-light">{{Auth::user()->name}}</span> </a>
+                        <img src="{{ asset('assets/admin/img/profile.jpg') }}" alt="user-img" width="36" class="img-circle"><span class=" text-dark">{{Auth::user()->name}}</span> </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li>
                             <div class="user-box  ">
