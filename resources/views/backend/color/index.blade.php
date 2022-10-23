@@ -37,8 +37,8 @@
                                                             <tr>
                                                                 <th scope="col">#</th>
                                                                 <th scope="col">Name Of Color</th>
-                                                                <th scope="col">Is Active</th>
                                                                 <th scope="col">Product</th>
+                                                                <th scope="col">Is Active</th>
                                                                 <th colspan="3" scope="col">Action</th>
 
                                                         </thead>
